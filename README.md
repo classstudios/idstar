@@ -53,6 +53,8 @@ result=百度图像识别.animalDetect(get_file_content(图片路径))
 ```
 
 > 百度AI图像识别参考文档：https://ai.baidu.com/docs#/ImageClassify-Python-SDK/top
+
+
 ## Python应用百度AI做图像识别2.0的探索——返回值如何处理
 ****7、发现返回值是一堆乱码****
 
