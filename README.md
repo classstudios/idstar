@@ -6,7 +6,8 @@ using python identifying stars or animals
 
 *1、准备工作：安装百度AI为python开发的API SDK模块：baidu-aip模块*
 
-#在系统的命令控制行下使用  
+
+在系统的命令控制行下使用  
 #pip install baidu-aip 命令在线安装
     
 
@@ -17,15 +18,20 @@ using python identifying stars or animals
 #调用百度AI的API包
 #from aip import AipImageClassify
 
-3、登陆并注册百度AI： http://ai.baidu.com/?track=cp:aipinzhuan|pf:pc|pp:AIpingtai|pu:title|ci:|kw:10005792
-获得百度AI的APPID和APIKey 或者使用我的
-定义一个百度AI图像识别功能的SDK客户端 写在脚本中：
+
+*3、加入百度AI注册信息*
+登陆并注册百度AI： http://ai.baidu.com/?track=cp:aipinzhuan|pf:pc|pp:AIpingtai|pu:title|ci:|kw:10005792
+获得百度AI的APPID和APIKey，在脚本中定义一个百度AI图像识别功能的SDK函数对象，如下：
+
+
 APP_ID = 'your app id'
 API_KEY = 'your app key'
 SECRET_KEY = 'your secret key'
 百度图像识别 = AipImageClassify(APP_ID, API_KEY, SECRET_KEY)
 
-4、之后我们要定义如何读取文件的方法
+
+
+*4、之后我们要定义如何读取文件的方法*
 #定义一个读取本地图片文件的函数
 def get_file_content(图片路径): 
     with open(图片路径, 'rb') as fp:
