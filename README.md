@@ -53,3 +53,36 @@ result=百度图像识别.animalDetect(get_file_content(图片路径))
 ```
 
 > 百度AI图像识别参考文档：https://ai.baidu.com/docs#/ImageClassify-Python-SDK/top
+## Python应用百度AI做图像识别2.0的探索——返回值如何处理
+****7、发现返回值是一堆乱码****
+
+修改文件名，分析数据发现，展开思索：
+
+> **得到的内容很繁多，我们真正需要的是？  为何会有多个结果？ Score是什么意思？猜一猜 返回的result是什么数据类型？**
+
+什么是字典？
+> 请看菜鸟教程的解释： http://www.runoob.com/python/python-dictionary.html
+
+键值对`key : value`
+
+字典： `d = {key1 : value1, key2 : value2 }`
+
+比如我们现在想要访问字典内特定的值：
+```python
+dict = {'Name': 'Zara', 'Age': 7, 'Class': 'First'}
+ print （"dict['Name']: ", dict['Name']）
+```
+
+> 以上实例输出结果： dict['Name']:  Zara
+
+有了上面的例子你有想法了吧。
+
+```python
+result[?]
+```
+好像还是不对
+
+那咋办？
+```python
+Result[?][?]
+```
