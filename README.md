@@ -62,7 +62,7 @@ result=百度图像识别.animalDetect(get_file_content(图片路径))
 
 > **得到的内容很繁多，我们真正需要的是？  为何会有多个结果？ Score是什么意思？猜一猜 返回的result是什么数据类型？**
 
-什么是字典？
+****8、什么是字典？****
 > 请看菜鸟教程的解释： http://www.runoob.com/python/python-dictionary.html
 
 键值对`key : value`
@@ -77,14 +77,27 @@ dict = {'Name': 'Zara', 'Age': 7, 'Class': 'First'}
 
 > 以上实例输出结果： dict['Name']:  Zara
 
-有了上面的例子你有想法了吧。
+****9、用字典方式，选择”result“这个key****
 
 ```python
-result[?]
+print(result["result"])
 ```
-好像还是不对
+得到如下结果：
+> [{'score': '0.240384', 'name': '大耳蝠'}, {'score': '0.166646', 'name':
+> '棕蝠'}, {'score': '0.157134', 'name': '大鼠耳蝠'}, {'score': '0.0905424',
+> 'name': '吸血蝠'}, {'score': '0.0892673', 'name': '狐蝠'}, {'score':
+> '0.0849477', 'name': '菊头蝠'}]
 
-那咋办？
+****10、然后用数组方式，找数组里第0项****
 ```python
-Result[?][?]
+print(result["result"][0])
 ```
+得到进一步筛选的结果：
+> {'score': '0.240384', 'name': '大耳蝠'}
+
+****11、最后再用字典，取出”name“这个key对应的键值****
+```python
+print(result["result"][0]["name"])
+```
+
+> 大耳蝠 
